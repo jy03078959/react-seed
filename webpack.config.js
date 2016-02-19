@@ -19,7 +19,8 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015'],
+      exclude: /(node_modules|bower_components)/,
+      loaders: ['react-hot', 'babel'],
       include: path.join(__dirname, 'src')
     }, {
       test: /\.css$/, // Only .css files

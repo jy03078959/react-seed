@@ -1,10 +1,23 @@
-import './app.css'
-import React, { Component } from 'react';
-
-export default class App extends Component {
+import React,{Component} from 'react';
+import CommentBox from "./component/CommentBox";
+import LikeButton from "./component/LikeButton";
+/*static defaultProps = {
+  autoPlay: false,
+  maxLoops: 10,
+}*/
+var data = [
+  {id: 1, author: "Pete Hunt", text: "This is one comment"},
+  {id: 2, author: "Jordan Walke", text: "This is *another* comment"}
+];
+class App extends Component {
+  static defaultProps = {
+    autoPlay: false,
+    maxLoops: 11,
+  };
   render() {
     return (
-      <h1>Hello, 来吧fds范德萨aworld.</h1>
+    <CommentBox data={data}></CommentBox>
     );
   }
 }
+export default App;
