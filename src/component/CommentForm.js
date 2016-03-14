@@ -11,10 +11,10 @@ class CommentForm extends Component {
 
     handleAuthorChange = e=> {
         this.setState({author: e.target.value});
-    }
+    };
     handleTextChange = e=> {
         this.setState({text: e.target.value});
-    }
+    };
     handleSubmit = e=> {
         e.preventDefault();
         var author = this.state.author.trim();
@@ -22,13 +22,12 @@ class CommentForm extends Component {
         if (!text || !author) {
             return;
         }
-        // TODO: send request to the server
-        this.setState({author: '', text: ''});
-    }
+        this.props.onCommentSubmit({author: author, text: text});
+    };
 
     render() {
         return (
-            <form className="commentForm">
+            <form className="commentForm" onSubmit={this.handleSubmit}>
                 <input
                     type="text"
                     placeholder="Your name"
@@ -41,7 +40,7 @@ class CommentForm extends Component {
                     value={this.state.text}
                     onChange={this.handleTextChange}
                 />
-                <input type="submit" value="Post"/>
+                <input type="submit"  value="Post"/>
             </form>
         );
     }

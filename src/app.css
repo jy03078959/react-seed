@@ -1,4 +1,17 @@
 body{
-	background-color: red;
+	background-color: #d5ffca;
 	border-top: 100px;
+}
+.commentBox{
+
+}
+.commentList{
+	padding: 10px;
+	border: 1px solid #00d6b2;
+}
+.commentForm{
+
+}
+.comment{
+	background-color: #00d6b2;
 }

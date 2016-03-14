@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import CommentBox from "./component/CommentBox";
 import LikeButton from "./component/LikeButton";
+import "./app.css"
 /*static defaultProps = {
   autoPlay: false,
   maxLoops: 10,
